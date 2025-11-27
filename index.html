@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بورتفوليو خدمات استخراج بيانات الويب</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" data-key="logo">mohamed benktib</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-key="home">الرئيسية</a>
+                <a href="#about" class="nav-link" data-key="about">عنّي</a>
+                <a href="#services" class="nav-link" data-key="services">الخدمات</a>
+                <a href="#pricing" class="nav-link" data-key="pricing">العروض</a>
+                <a href="#portfolio" class="nav-link" data-key="portfolio">الأعمال</a>
+                <a href="#contact" class="nav-link" data-key="contact">اتصل بي</a>
+            </div>
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="fr">Français</button>
+                </div>
+                <div class="header-social">
+                    <a href="https://www.linkedin.com/in/mohamed-benktib-6243a3380/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Bitomohamed" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 data-key="hero_title">خدمات استخراج بيانات الويب المتخصصة</h1>
+                <p data-key="hero_subtitle">أقدم حلول استخراج بيانات دقيقة وفعالة تساعد أعمالك على اتخاذ قرارات أفضل وتحقيق النمو</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn" data-key="view_services">استعرض الخدمات</a>
+                    <a href="#contact" class="btn btn-outline" data-key="order_now">اطلب خدمة الآن</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-text" data-key="projects_completed">مشروع مكتمل</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-text" data-key="satisfied_clients">عميل راضٍ</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-text" data-key="years_experience">سنوات خبرة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-snippet">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">web_scraper.py</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code>import requests
+from bs4 import BeautifulSoup
+
+# استخراج البيانات من موقع الويب
+url = "https://example.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'html.parser')
+
+# استخراج المعلومات المطلوبة
+data = []
+for item in soup.find_all('div', class_='target'):
+    title = item.find('h2').text
+    price = item.find('span', class_='price').text
+    data.append({'title': title, 'price': price})
+
+# تصدير البيانات إلى ملف CSV
+import pandas as pd
+df = pd.DataFrame(data)
+df.to_csv('extracted_data.csv', index=False)</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-key="scroll_down">قم بالتمرير لأسفل</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- قسم عني -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-key="about_me">عنّي</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-key="about_text1">أنا مطور متخصص في استخراج بيانات الويب باستخدام أحدث التقنيات مثل Python وBeautifulSoup وScrapy وSelenium. أمتلك خبرة واسعة في تطوير برامج مخصصة لاستخراج البيانات من مختلف أنواع المواقع.</p>
+                    <p data-key="about_text2">أتخصص في تحويل البيانات غير المهيكلة على الويب إلى معلومات قابلة للتحليل والاستخدام، مما يساعد الشركات على اتخاذ قرارات مستنيرة بناءً على بيانات دقيقة.</p>
+                    
+                    <div class="profile-social">
+                        <h3 data-key="connect_with_me">تواصل معي</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.linkedin.com/in/mohamed-benktib-6243a3380/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                                <span data-key="linkedin">لينكدإن</span>
+                            </a>
+                            <a href="https://github.com/Bitomohamed" class="social-btn github" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span data-key="github">جيت هاب</span>
+                            </a>
+                            <a href="mailto:mohamed.benktib.en@gmail.com" class="social-btn email">
+                                <i class="fas fa-envelope"></i>
+                                <span data-key="email">البريد الإلكتروني</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <h3 data-key="technical_skills">المهارات التقنية</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">BeautifulSoup</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Scrapy</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Selenium</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Pandas</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span data-key="profile_image">صورة شخصية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-key="services">الخدمات</h2>
+            <p class="section-subtitle" data-key="services_subtitle">أقدم مجموعة متكاملة من خدمات استخراج بيانات الويب لتلبية احتياجاتك المختلفة</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 data-key="service1_title">استخراج بيانات المنتجات</h3>
+                    <p data-key="service1_desc">استخراج معلومات المنتجات والأسعار والمراجعات من مواقع التجارة الإلكترونية لمتابعة المنافسين وتحليل السوق.</p>
+                    
+                    <div class="service-details">
+                        <h4 data-key="details">التفاصيل:</h4>
+                        <ul>
+                            <li data-key="service1_detail1">استخراج بيانات المنتجات (الاسم، السعر، الوصف)</li>
+                            <li data-key="service1_detail2">جمع التقييمات والمراجعات</li>
+                            <li data-key="service1_detail3">متابعة تغيرات الأسعار</li>
+                            <li data-key="service1_detail4">تحليل المنافسين</li>
+                            <li data-key="service1_detail5">تصدير البيانات بصيغ متعددة (CSV, JSON, Excel)</li>
+                        </ul>
+                        
+                        <h4 data-key="execution_time">مدة التنفيذ:</h4>
+                        <p data-key="service1_time">2-5 أيام عمل حسب حجم المشروع</p>
+                        
+                        <div class="service-actions">
+                            <button class="btn service-order-btn" data-service="استخراج بيانات المنتجات" data-key="order_service">اطلب هذه الخدمة</button>
+                            <a href="#pricing" class="btn-link" data-key="view_offers">عرض العروض</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3 data-key="service2_title">استخراج بيانات الوسائط</h3>
+                    <p data-key="service2_desc">جمع الصور ومقاطع الفيديو والمحتوى المرئي من مواقع الويب لمشاريعك البحثية أو التجارية.</p>
+                    
+                    <div class="service-details">
+                        <h4 data-key="details">التفاصيل:</h4>
+                        <ul>
+                            <li data-key="service2_detail1">استخراج الصور بجودات مختلفة</li>
+                            <li data-key="service2_detail2">تحميل مقاطع الفيديو</li>
+                            <li data-key="service2_detail3">استخراج البيانات الوصفية للوسائط</li>
+                            <li data-key="service2_detail4">تنظيم الوسائط في مجلدات</li>
+                            <li data-key="service2_detail5">ضغط وتصنيف الوسائط المستخرجة</li>
+                        </ul>
+                        
+                        <h4 data-key="execution_time">مدة التنفيذ:</h4>
+                        <p data-key="service2_time">3-7 أيام عمل حسب حجم المشروع</p>
+                        
+                        <div class="service-actions">
+                            <button class="btn service-order-btn" data-service="استخراج بيانات الوسائط" data-key="order_service">اطلب هذه الخدمة</button>
+                            <a href="#pricing" class="btn-link" data-key="view_offers">عرض العروض</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 data-key="service3_title">استخراج المحتوى الإخباري</h3>
+                    <p data-key="service3_desc">تجميع المقالات الإخبارية والعناوين والمحتوى الصحفي لتحليلات الرأي العام ومراقبة العلامات التجارية.</p>
+                    
+                    <div class="service-details">
+                        <h4 data-key="details">التفاصيل:</h4>
+                        <ul>
+                            <li data-key="service3_detail1">جمع المقالات الإخبارية من مصادر متعددة</li>
+                            <li data-key="service3_detail2">استخراج العناوين والتواريخ والمحتوى</li>
+                            <li data-key="service3_detail3">تحليل المشاعر والرأي العام</li>
+                            <li data-key="service3_detail4">مراقبة ظهور العلامات التجارية</li>
+                            <li data-key="service3_detail5">تحديث دوري للبيانات</li>
+                        </ul>
+                        
+                        <h4 data-key="execution_time">مدة التنفيذ:</h4>
+                        <p data-key="service3_time">2-4 أيام عمل حسب عدد المصادر</p>
+                        
+                        <div class="service-actions">
+                            <button class="btn service-order-btn" data-service="استخراج المحتوى الإخباري" data-key="order_service">اطلب هذه الخدمة</button>
+                            <a href="#pricing" class="btn-link" data-key="view_offers">عرض العروض</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-more">
+                <button class="btn btn-outline" id="load-more-services" data-key="load_more">تحميل المزيد من الخدمات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العروض -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title" data-key="pricing_plans">عروض الأسعار</h2>
+            <p class="section-subtitle" data-key="pricing_subtitle">اختر الباقة التي تناسب احتياجاتك وميزانيتك</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-key="basic_plan">الباقة الأساسية</h3>
+                        <div class="price">$199</div>
+                        <p data-key="basic_plan_desc">مناسب للمشاريع الصغيرة والمبتدئين</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-key="feature1">استخراج بيانات من موقع واحد</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature2">حتى 1000 سجل بيانات</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature3">تصدير إلى CSV أو Excel</span></li>
+                            <li><i class="fas fa-times"></i> <span data-key="feature4">تحديث دوري للبيانات</span></li>
+                            <li><i class="fas fa-times"></i> <span data-key="feature5">دعم فني بعد التسليم</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-actions">
+                        <button class="btn pricing-order-btn" data-plan="الباقة الأساسية" data-key="choose_plan">اختر هذه الباقة</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" data-key="popular">الأكثر شيوعاً</div>
+                    <div class="pricing-header">
+                        <h3 data-key="advanced_plan">الباقة المتقدمة</h3>
+                        <div class="price">$499</div>
+                        <p data-key="advanced_plan_desc">مناسب للشركات الصغيرة والمتوسطة</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-key="feature6">استخراج بيانات من 3 مواقع</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature7">حتى 5000 سجل بيانات</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature8">تصدير إلى CSV, Excel, JSON</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature9">تحديث أسبوعي للبيانات لمدة شهر</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature10">دعم فني لمدة أسبوعين</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-actions">
+                        <button class="btn pricing-order-btn" data-plan="الباقة المتقدمة" data-key="choose_plan">اختر هذه الباقة</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-key="professional_plan">الباقة الاحترافية</h3>
+                        <div class="price">$999</div>
+                        <p data-key="professional_plan_desc">مناسب للشركات الكبيرة والمشاريع المعقدة</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-key="feature11">استخراج بيانات من 10 مواقع</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature12">عدد غير محدود من سجلات البيانات</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature13">جميع صيغ التصدير المتاحة</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature14">تحديث يومي للبيانات لمدة 3 أشهر</span></li>
+                            <li><i class="fas fa-check"></i> <span data-key="feature15">دعم فني لمدة شهر كامل</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-actions">
+                        <button class="btn pricing-order-btn" data-plan="الباقة الاحترافية" data-key="choose_plan">اختر هذه الباقة</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="custom-pricing">
+                <h3 data-key="custom_solution">هل تحتاج إلى حل مخصص؟</h3>
+                <p data-key="custom_solution_desc">يمكنني تقديم عرض سعر مخصص يناسب متطلبات مشروعك بشكل دقيق</p>
+                <button class="btn" id="custom-order-btn" data-key="request_custom">اطلب عرض مخصص</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأعمال -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-key="previous_work">الأعمال السابقة</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" data-key="project_image">مشروع استخراج بيانات</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 data-key="project1_title">استخراج بيانات المنتجات من Amazon</h3>
+                        <p data-key="project1_desc">تطوير برنامج لاستخراج معلومات المنتجات والأسعار والتصنيفات من Amazon لمقارنة الأسعار وتحليل المنافسين.</p>
+                        <div class="tech-used">
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <h4 data-key="results">النتائج:</h4>
+                            <p data-key="project1_result">تم استخراج 50,000 منتج مع تحديث أسبوعي للأسعار</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" data-key="project_image">مشروع استخراج بيانات</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 data-key="project2_title">جمع البيانات العقارية</h3>
+                        <p data-key="project2_desc">برنامج لجمع قوائم العقارات وأسعارها ومواصفاتها من مواقع العقارات الرئيسية لتحليل سوق العقارات.</p>
+                        <div class="tech-used">
+                            <span>Scrapy</span>
+                            <span>MongoDB</span>
+                            <span>Selenium</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <h4 data-key="results">النتائج:</h4>
+                            <p data-key="project2_result">تم جمع 20,000 عقار مع تحديث يومي للبيانات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" data-key="project_image">مشروع استخراج بيانات</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 data-key="project3_title">مراقبة أسعار العملات الرقمية</h3>
+                        <p data-key="project3_desc">نظام لمراقبة أسعار العملات الرقمية في الوقت الفعلي من منصات التداول المختلفة مع إشعارات عند تغير الأسعار.</p>
+                        <div class="tech-used">
+                            <span>Python</span>
+                            <span>APIs</span>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <h4 data-key="results">النتائج:</h4>
+                            <p data-key="project3_result">مراقبة 100+ عملة رقمية مع إشعارات فورية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بي -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contact_me">اتصل بي</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-key="lets_work_together">لنعمل معًا</h3>
+                    <p data-key="contact_desc">هل تحتاج إلى استخراج بيانات لعملك أو مشروعك؟ لا تتردد في التواصل معي لمناقشة احتياجاتك.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>mohamed.benktib.en@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>212689931773</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span data-key="location">tanger, moroco</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohamed-benktib-6243a3380/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Bitomohamed" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/mohamedben1603" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name">
+                        <label for="name" data-key="name">الاسم <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-key="email">البريد الإلكتروني *</label>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject">
+                        <label for="subject" data-key="subject">الموضوع <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service-type" name="service-type">
+                            <option value="" data-key="select_service">اختر نوع الخدمة</option>
+                            <option value="استخراج بيانات المنتجات" data-key="service1_title">استخراج بيانات المنتجات</option>
+                            <option value="استخراج بيانات الوسائط" data-key="service2_title">استخراج بيانات الوسائط</option>
+                            <option value="استخراج المحتوى الإخباري" data-key="service3_title">استخراج المحتوى الإخباري</option>
+                            <option value="عرض مخصص" data-key="custom_offer">عرض مخصص</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <label for="message" data-key="message">الرسالة <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                    </div>
+                    <button type="submit" class="btn" data-key="send_message">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج طلب الخدمة -->
+    <div class="order-modal" id="order-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 id="modal-title" data-key="order_service">طلب خدمة</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <input type="text" id="order-name" name="order-name">
+                    <label for="order-name" data-key="full_name">الاسم الكامل <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="order-email" name="order-email" required>
+                    <label for="order-email" data-key="email">البريد الإلكتروني *</label>
+                    <span class="error-message" id="order-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="order-service" name="order-service" readonly>
+                    <label for="order-service" data-key="requested_service">الخدمة المطلوبة</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="order-details" name="order-details" rows="4" data-key="describe_requirements" placeholder="صف متطلباتك بالتفصيل..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="order-deadline" data-key="deadline">الموعد النهائي المطلوب <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                    <input type="date" id="order-deadline" name="order-deadline">
+                </div>
+                <div class="form-group">
+                    <label for="order-budget" data-key="budget">الميزانية المتوقعة <span class="optional-text" data-key="optional">(اختياري)</span></label>
+                    <input type="text" id="order-budget" name="order-budget" placeholder="$">
+                </div>
+                <button type="submit" class="btn" data-key="send_request">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2023 <span data-key="all_rights_reserved">جميع الحقوق محفوظة</span> | <span data-key="portfolio">بورتفوليو خدمات استخراج بيانات الويب</span></p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/mohamed-benktib-6243a3380/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Bitomohamed" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/mohamedben1603" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- رسالة ترحيب -->
+    <div class="welcome-notification" id="welcome-notification">
+        <div class="notification-content">
+            <span class="close-notification" id="close-notification">&times;</span>
+            <h3 data-key="welcome_title">مرحباً بك في بورتفوليو خدمات استخراج البيانات!</h3>
+            <p data-key="welcome_message">يمكنك تصفح خدماتي وعروضي السابقة، وطلب خدمة مخصصة تناسب احتياجاتك.</p>
+            <button class="btn" id="start-exploring" data-key="start_exploring">ابدأ الاستكشاف</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="lang.js"></script>
+</body>
+</html>
